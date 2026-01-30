@@ -1,6 +1,6 @@
 # Product Reservation Frontend
 
-This is a frontend-only React application built as part of a practical assignment to recreate a product reservation flow based on a provided Figma design.
+This is a frontend-only React application built as part of a practical assignment to recreate a product reservation flow based on a provided design.
 
 The main goal of this project was to match the UI layout and user flow as closely as possible while keeping the code clean and easy to understand.
 
@@ -53,16 +53,17 @@ For larger applications with deeply shared or complex state, I would consider us
 
 - The application represents a single user session
 - Total stock is fixed at **5 units**
-- A user can reserve up to **2 units**
 - Reservations expire automatically if not completed
 - All data resets on page refresh
 - No backend or persistence is involved
 
 ---
 
-## Running the Project Locally
 
 ### Install dependencies
 ```bash
 cd app
 npm install
+
+# Start Development Server
+npm run dev
