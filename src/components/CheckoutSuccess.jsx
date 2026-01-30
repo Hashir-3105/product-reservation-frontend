@@ -1,7 +1,7 @@
 import { RotateCcw, ShoppingBag } from "lucide-react";
 import React from "react";
 import InfoBox from "./InfoBox";
-import Confirmed from "./Icons/Confirmed";
+import Confirmed from "../assets/Icons/Confirmed";
 
 function CheckoutSuccess({ onContinue }) {
   return (

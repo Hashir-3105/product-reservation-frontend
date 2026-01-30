@@ -3,7 +3,7 @@ import InfoBox from "./InfoBox";
 import { ShoppingCart } from "lucide-react";
 import CartPanel from "./CartPanel";
 import CheckoutSuccess from "./CheckoutSuccess";
-import Confirmed from "./Icons/Confirmed";
+import Confirmed from "../assets/Icons/Confirmed";
 
 function MainContent({
   view,
