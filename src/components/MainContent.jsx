@@ -4,6 +4,7 @@ import { ShoppingCart } from "lucide-react";
 import CartPanel from "./CartPanel";
 import CheckoutSuccess from "./CheckoutSuccess";
 import Confirmed from "../assets/Icons/Confirmed";
+import { PRODUCT_INFO } from "../constants/product";
 
 function MainContent({
   view,
@@ -44,9 +45,9 @@ function MainContent({
               </div>
 
               <ProductInfo
-                title="Wireless Headphones"
-                price={99}
-                emoji="🎧"
+                title={PRODUCT_INFO.title}
+                price={PRODUCT_INFO.price}
+                emoji={PRODUCT_INFO.emoji}
                 totalStock={TOTAL_STOCK}
                 reserved={reservedCount}
                 available={availableCount}

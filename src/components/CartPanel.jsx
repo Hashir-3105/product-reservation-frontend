@@ -1,11 +1,13 @@
 import { Clock5, ShoppingCart, AlertTriangle } from "lucide-react";
 import React from "react";
 import InfoBox from "./InfoBox";
+import PanelCard from "./PanelCard";
+import ProductInfoCard from "./ProductInfoCard";
 
 function CartPanel({ remainingMs, onCancel, onCheckout, formatMs }) {
   return (
     <>
-      <div className="rounded-xl border border-slate-200 bg-linear-to-br from-green-50 to-blue-50 p-6 flex flex-col gap-4">
+      <PanelCard variant="green">
         <div className="flex items-center gap-2 text-xl font-bold text-slate-900">
           <span>
             <ShoppingCart />
@@ -13,21 +15,7 @@ function CartPanel({ remainingMs, onCancel, onCheckout, formatMs }) {
           <span>Your Cart</span>
         </div>
 
-        <div className="rounded-xl bg-white border border-slate-200 p-5 flex flex-col gap-4">
-          <div className="flex justify-between items-start">
-            <div>
-              <h2 className="text-lg font-semibold text-slate-900">
-                Wireless Headphones
-              </h2>
-              <p className="mt-1 text-sm text-slate-600">
-                Quantity:{" "}
-                <span className="font-semibold text-slate-900">1</span>
-              </p>
-            </div>
-
-            <div className="text-2xl font-extrabold text-blue-600">$99</div>
-          </div>
-
+        <ProductInfoCard quantity={1}>
           <div className="rounded-xl border border-orange-200 bg-orange-50 px-5 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2 text-orange-700 font-semibold">
               <span>
@@ -56,7 +44,7 @@ function CartPanel({ remainingMs, onCancel, onCheckout, formatMs }) {
             <span>✕</span>
             Cancel Reservation
           </button>
-        </div>
+        </ProductInfoCard>
 
         <button
           type="button"
@@ -65,7 +53,7 @@ function CartPanel({ remainingMs, onCancel, onCheckout, formatMs }) {
         >
           Complete Checkout
         </button>
-      </div>
+      </PanelCard>
       <InfoBox title={"Timer Active:"}>
         Complete checkout before timer expires or item will be returned to
         stock.

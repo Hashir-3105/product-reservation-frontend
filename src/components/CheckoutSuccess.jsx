@@ -1,12 +1,13 @@
 import { RotateCcw, ShoppingBag } from "lucide-react";
-import React from "react";
 import InfoBox from "./InfoBox";
 import Confirmed from "../assets/Icons/Confirmed";
+import PanelCard from "./PanelCard";
+import { PRODUCT_INFO } from "../constants/product";
 
 function CheckoutSuccess({ onContinue }) {
   return (
     <>
-      <div className="rounded-xl border border-emerald-200 bg-linear-to-br from-emerald-50 to-green-50 p-6 flex flex-col gap-6">
+      <PanelCard variant="emerald">
         <div className="mx-auto flex p-4 items-center justify-center rounded-full bg-green-100">
           <Confirmed
             className={
@@ -31,13 +32,13 @@ function CheckoutSuccess({ onContinue }) {
           </div>
 
           <div className="flex justify-between text-sm text-slate-700">
-            <span>Wireless Headphones</span>
-            <span className="font-semibold">$99</span>
+            <span>{PRODUCT_INFO.title}</span>
+            <span className="font-semibold">${PRODUCT_INFO.price}</span>
           </div>
 
           <div className="border-t border-gray-200 pt-3 flex justify-between text-base font-extrabold text-emerald-700">
             <span>Total</span>
-            <span>$99</span>
+            <span>${PRODUCT_INFO.price}</span>
           </div>
         </div>
         <button
@@ -50,7 +51,7 @@ function CheckoutSuccess({ onContinue }) {
           </span>
           Continue Shopping
         </button>
-      </div>
+      </PanelCard>
       <InfoBox title={"Cart Cleared:"}>
         Reservation converted to purchase. Timer stopped and cart emptied.
       </InfoBox>
